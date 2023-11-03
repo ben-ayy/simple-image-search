@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImageSearcher.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label  Text="Image Searcher"
+                    FontSize = "26"
+                    HorizontalOptions = "Center"
+                    VerticalOptions = "Center" />
+            <Image  x:Name = "Result"
+                    Source="https://i0.wp.com/culturalhistoryoftheinternet.com/wp-content/uploads/2020/11/cover2-1.jpg"
+                    Aspect="Fill"
+                    HeightRequest="400"
+                    WidthRequest="800"/>
+            <Entry  x:Name="imageSearch"
+                    Placeholder="Enter search quesry..."
+                    ClearButtonVisibility="WhileEditing" 
+                    WidthRequest="400" />
+            <Button x:Name="search"
+                    Text="Search!"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnSearchClick" />
+            <Label  x:Name="Response"
+                    Text=""
+                    TextColor="#FF0000"
+                    FontSize="12"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
